@@ -1,0 +1,117 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage{CJKutf8}
+% \usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{enumerate}
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{小组周报（Weekly Reports）}
+\author{王慧}
+
+\begin{document}
+%\begin{CJK*}{GBK}{kai}
+\begin{CJK}{UTF8}{gbsn}
+\CJKindent
+\maketitle
+\begin{comment}
+
+\begin{abstract}
+这是一个关于小组周报的共享工程文档，请大家认真阅读。\\
+This is a shared project about group weekly reports. Please read carefully. 
+
+1. 请在属于您的部分（part）编辑每周的学习、研究进展（每人每周新增一个section）。亦可在文档中留下问题。小组成员均可按照以下两种方式编辑答复：\\
+Please edit your weekly reports on learning and research progress. You can also left some questions that may be answers by any members in our group via the following two modes:
+\begin{itemize}
+\item 直接在正文中回答（Edit answers directly below the questions）：\\
+Q: 何谓语义安全（Waht means semantic security）？\\
+A: 密文不泄露明文的任何信息（The ciphertexts leaks nothing about the corresponding plaintexts）。
+\item 以边注方式回答（Edit answers at the margin of the pages）：\\
+Q: 何谓语义安全？\todo{A: 密文不泄露明文的任何信息（The ciphertexts leaks nothing about the corresponding plaintexts）。}
+\end{itemize}
+
+2. 最好是在提问时把相关的参考文献（仅限pdf）也上传到我们的共享工程里的references文件夹中。我在这里上传了Kish12文献，以供参考。\\
+It is better to upload the related references (pdf only) to the folder of references of our shared project.
+
+3. 鼓励大家用英文编写周报。\\
+You are encouraged to write your weekly reports in English. Just take is as a weekly training: Even Chinglish is OK.
+
+\bigskip
+
+注：即使周报不是强制性的，小组成员学会熟练用latex写论文，是强制性的必须学会的本领。\\
+
+Remark: Even you are not obligated to edit weekly reports, you must learn how to write papers by using Latex skillfully. 
+
+\end{abstract}
+\end{comment}
+
+\part{2018年秋季学期}
+
+\section{Week 5: Oct 8 -- Oct 14, 2018}
+
+\subsection{What I do this week}
+
+\begin{itemize}
+\item 学习数论中整数的可除性
+\begin{enumerate}[1)]
+    \item 带余数除法
+    \item 辗转相除法（Euclidean algorithm）
+    \item 质数·算数基本定理
+\end{enumerate}
+\item 英语阅读（每天精读两篇CET6文章）
+\item 了解了同态加密算法（Homomorphic Encryption）
+\item 掌握了单向陷门函数（One-way Trapdoor Function）
+\begin{enumerate}[1)]
+	\item 首先是一个单向函数，在一个方向上易于计算而反方向却难于计算。即已知x，易于计算f（x），而已知f（x），却难于计算x。
+	\item 有陷门。如果知道那个秘密陷门，则也能很容易在另一个方向计算这个函数。即，一旦给出f（x）和一些秘密信息y，就很容易计算x。在公开密钥密码中，计算f（x）相当于加密，陷门y相当于私有密钥，而利用陷门y求f（x）中的x则相当于解密。
+\end{enumerate}
+\item 掌握了密文策略基于属性加密(CP-ABE)访问树构造与解密
+\item 安装了texlive和texstudio方便在本地编写latex
+\item 安装了linux系统，学会了使用简单命令行ls、cd、make、cat等，会编译pathon文件，学会从GitHub上下载项目
+\item 整理了几种主流的论文图片制作软件，开始接触AI作图
+
+\end{itemize}
+
+\subsection{Left Questions}
+\begin{itemize}
+\item 同态加密中，对密文直接进行处理，跟对明文进行处理再加密，得到的结果相同，那么同态加密的重要意义是什么？应用在哪些场景？
+\item 对于一个指数很大的指数函数，已知f（x），难计算x，这样的函数具备做陷门函数的潜质吗，如果可以，陷门是什么？为什么有了陷门就能解出x了？
+\item latex中函数f（x）怎样写的美观一点？
+\end{itemize}
+
+
+\subsection{What I will do next week}
+\begin{itemize}
+\item 继续学习数论、英语
+\item 继续从GitHub上下载项目练习，注意看文档和网上搜索解决方案
+\item 开始阅读《现代密码学》
+\item 周五之前把大创立项结项书写完
+\end{itemize}
+
+\begin{comment}
+\begin{thebibliography}{1}
+
+\bibitem{Kish12}
+L.B.~Kish et al., Information Networks Secured by the Laws of Physics. IEICE Trans. Commun. Vol. E95-B, No.5, May 2012.
+
+\bibitem{Zcash}
+ref. info. of Zcash. 
+
+\end{thebibliography}
+\end{comment}
+
+\end{CJK}
+\end{document}
